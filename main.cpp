@@ -54,7 +54,8 @@ int main() {
 
     // Objects
     // The C++ compiler needs to be hinted on whether the expression denotes
-    // a JSON object or an array. Objects are constructed from a list of key value pairs
+    // a JSON object or an array. Objects are constructed from a list of key value pairs where the
+    // key is always a string and the value can be anything
     v = Object{{"key", "value"}};
     std::cout << printer.print(v) << std::endl;
 
