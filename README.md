@@ -20,6 +20,10 @@ Copy the `json` subdirectory into your project and make sure that `parser.cpp` a
 
 All json definitions are contained in the `JSON` namespace, so you need to either prefix with `JSON::` or use `using namespace JSON` in your class or method.
 
+## Tests
+
+The unit tests are currently still located [here](https://github.com/pb82/Elson/tree/master/tests) but i'd like to move them to this repository (and eventually retire the old one).
+
 ## License
 
 All of the code in this repository is licensed under the MIT license (included) except for `json/include/utf8.h` which is licensed under the Boost Software License 1.0 and part of [this project](https://github.com/nemtrif/utfcpp). License [here](https://github.com/nemtrif/utfcpp/blob/master/LICENSE).
