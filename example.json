@@ -1,0 +1,10 @@
+{
+  "name": "example.json",
+  "number": 1,
+  "boolean": true,
+  "null": null,
+  "object": {
+    "nested": "string"
+  },
+  "important_values": [1, 2, "3", {"a":  "b"}, [4,5], false, null]
+}
