@@ -144,6 +144,8 @@ int main() {
     }
 
     // Values can be mutated:
+    // note: asMutable only has implementations for `Array` and `Object` (other values can
+    // simply be overwritten).
     auto &ref = v["a"].asMutable<Array>();
     ref.push_back(100);
     std::cout << printer.print(v) << std::endl;
