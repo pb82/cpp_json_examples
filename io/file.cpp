@@ -22,7 +22,7 @@ bool File::open() {
 }
 
 bool File::read(string &buffer, off_t position, size_t length) {
-    assert(position + length <= size);
+    assert(position + (off_t) length <= size);
     seek(position);
     file.read(&buffer[0], length);
     return !file.eof() && !file.bad() && !file.fail();
