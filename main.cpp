@@ -19,7 +19,7 @@ int main() {
     PrettyPrinter printer;
 
     // Parser can parse strings with valid json into a JSON::Value
-    // Parser objects can be reused: they reset themselves after every
+    // Parser objects can be reused: they reset themselves before every
     // parse
     Parser parser;
 
@@ -42,7 +42,7 @@ int main() {
     v = {1, 2, 3, "4", false, null};
     std::cout << printer.print(v) << std::endl;
 
-    // Array index in array
+    // Array index
     std::cout << v[3].as<string>() << std::endl;
 
     // Nested arrays
@@ -54,8 +54,7 @@ int main() {
 
     // Objects
     // The C++ compiler needs to be hinted on whether the expression denotes
-    // a JSON object or an array. Objects require double curly braces because they are
-    // constructed from key value pairs
+    // a JSON object or an array. Objects are constructed from a list of key value pairs
     v = Object{{"key", "value"}};
     std::cout << printer.print(v) << std::endl;
 
